@@ -17,15 +17,12 @@ function submitGridSize () {
     // Alert user regarding the maximum and minimum amount (100 and 0);
     const alertUser = document.querySelector('#alertUser');
 
-    if (userInputColumn > 100 && userInputColumn <= 0) 
+    if (userInputColumn > 100 || userInputColumn <= 0 || userInputRow > 100 || userInputRow <= 0) 
         {alertUser.textContent = "Please input a number between 0 and 100";
+        userInputColumn = 15;
+        userInputRow = 15;
         return;
-        };
-            
-    if (userInputRow > 100 && userInputRow >= 0)
-        {alertUser.textContent = "Please input a number between 0 and 100";
-        return;
-        };
+    };
 }
 
 
